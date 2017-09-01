@@ -1,0 +1,14 @@
+ db.collection.count() -> count total records
+
+1. use dn_name -> create new db or use that db
+2. db.collection_Name.find().pretty() -> to see db contents
+3. db.dropDatabase() -> to delete db
+
+4. db.phones.find({Brand:"Samsung"}).count() -> count elements with Samsung brand
+
+5. db.stores.find(
+   { $text: { $search: "java coffee shop" } },
+   { score: { $meta: "textScore" } }
+).sort( { score: { $meta: "textScore" } } )
+
+https://docs.mongodb.com/v3.2/text-search/
