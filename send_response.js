@@ -1,7 +1,7 @@
 var http = require('http');
 var fs = require('fs');
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017/ebay_db"; //ebay_db
+var url = "mongodb://localhost:27017/count1"; //ebay_db
 var jsonfile = require('jsonfile');
 
 http.createServer( function (request, response) {  

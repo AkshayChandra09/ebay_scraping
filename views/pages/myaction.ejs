@@ -1,0 +1,22 @@
+<%- contentFor('hero') %>
+
+<table style="width:100%">
+  <tr>
+    <th>Product Name: </th>
+    <th>Price: </th> 
+    <th>Brand: </th>
+  </tr>
+	
+	<% 
+		var result = JSON.parse(result);
+		
+		for(var i=0; i<result.length; i++) 
+		{%>
+		<tr>
+			<td><%= result[i].Product_Name %></td>
+			<td><%= result[i].Price %></td>
+			<td><%= result[i].Brand %></td>
+			</tr><br>
+	<% } %>
+	
+</table>

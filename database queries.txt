@@ -6,7 +6,11 @@
 
 4. db.phones.find({Brand:"Samsung"}).count() -> count elements with Samsung brand
 
-5. db.stores.find(
+5. db.articles.createIndex( { subject: "text" } ) ->create indexing
+
+6. db.articles.find( { $text: { $search: "coffee -shop" } } )
+
+7. db.stores.find(
    { $text: { $search: "java coffee shop" } },
    { score: { $meta: "textScore" } }
 ).sort( { score: { $meta: "textScore" } } )
